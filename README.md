@@ -36,17 +36,20 @@ Chaque événement respecte le format ci-dessous. Afin de simplifier le lien ave
             "season": "Saison de la fiche"
         },
         "playlist": {
-            "id_playlist": "Identifiant de Playlist",
-            "name": "Nom de la Playlist"
+            "id_playlist": "Identifiant de playlist",
+            "name": "Nom de la playlist",
+            "lang": "Langue de la playlist",
+            "season": "Saison de la playlist"
         },
         "page": {
             "id_page": "Identifiant de la page (nid ou post_id)",
-            "name": "Nom de la Playlist",
+            "name": "Nom de la page",
             "lang": "Langue de la page",
+            "season": "Saison de la page",
             "page_type": "Type de page",
             "tags": {
-                "places": "Lieux associé à la page",
-                "themes": "Themes associés à la page)",
+                "places": "Lieux associés à la page",
+                "themes": "Thématiques associées à la page",
                 "seasons": "Saisons associées à la page"
             }
         }
