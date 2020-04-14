@@ -18,15 +18,15 @@
             <th>Label</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody style="font-size:10px;">
         <tr>
-            <td>```hawwwai_sheet_view```</td>
+            <td>hawwwai_sheet_view</td>
             <td rowspan="2">FICHE|Bordereau|Nom|Identifiant Fiche|Identifiant SIT</td>
             <td>Page vue (Identifiant Hawwwai)</td>
             <td>Identifiant Fiche Hawwwai</td>
         </tr>
         <tr>
-            <td>```hawwwai_sheet_view_source```</td>
+            <td>hawwwai_sheet_view_source</td>
             <td>Page vue (Identifiant SIT Source)</td>
             <td>Identifiant SIT</td>
         </tr>
