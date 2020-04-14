@@ -8,8 +8,10 @@
 ## :fire: Documentation
 
 Toute la nomenclature des événements GTM envoyés par Hawwwai et Woody est détaillée dans ce document :
-[Google Sheet : Eskalad - GTM Events](https://docs.google.com/spreadsheets/d/1-MoWKIZ33HDxQhO8VjEm4PydfChZRBImAtM37vJOFt4/edit?usp=sharing)
 
+:ledger: [Google Sheet : Eskalad - GTM Events](https://docs.google.com/spreadsheets/d/1-MoWKIZ33HDxQhO8VjEm4PydfChZRBImAtM37vJOFt4/edit?usp=sharing)
+
+---
 
 Chaque événement respecte le format ci-dessous. Afin de simplifier le lien avec Google Analytics, nous préformatons les valeurs des 3 clés : "Catégorie, Action et Label".
 
