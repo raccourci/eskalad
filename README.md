@@ -5,33 +5,13 @@
 
 ---
 
-## :fire: Hawwwai GTM Events
+## :fire: Documentation
 
-### Sheets
+Toute la nomenclature des événements GTM envoyés par Hawwwai et Woody est détaillée dans ce document :
+[Google Sheet : Eskalad - GTM Events](https://docs.google.com/spreadsheets/d/1-MoWKIZ33HDxQhO8VjEm4PydfChZRBImAtM37vJOFt4/edit?usp=sharing)
 
-<table>
-    <thead>
-        <tr>
-            <th>Nom de l'événement</th>
-            <th>Catégorie</th>
-            <th>Action</th>
-            <th>Label</th>
-        </tr>
-    </thead>
-    <tbody style="font-size:10px;">
-        <tr>
-            <td>hawwwai_sheet_view</td>
-            <td rowspan="2">FICHE|Bordereau|Nom|Identifiant Fiche|Identifiant SIT</td>
-            <td>Page vue (Identifiant Hawwwai)</td>
-            <td>Identifiant Fiche Hawwwai</td>
-        </tr>
-        <tr>
-            <td>hawwwai_sheet_view_source</td>
-            <td>Page vue (Identifiant SIT Source)</td>
-            <td>Identifiant SIT</td>
-        </tr>
-    </tbody>
-</table>
+
+Chaque événement respecte le format ci-dessous. Afin de simplifier le lien avec Google Analytics, nous préformatons les valeurs des 3 clés : "Catégorie, Action et Label".
 
 ```
 {
@@ -50,14 +30,25 @@
             "type": "Libellé de bordereau",
             "bordereau" : "Code du cordereau en 3 lettres",
             "city": "Ville de la fiche"
+        },
+        "playlist": {
+            "id_playlist": "Identifiant de Playlist",
+            "name": "Nom de la Playlist",
+        },
+        "page": {
+            "id_page": "Identifiant de la page (nid ou post_id)",
+            "name": "Nom de la Playlist",
+            "lang": "Langue de la page",
+            "page_type": "Type de page",
+            "tags": {
+                "places": "Lieux associé à la page",
+                "themes": "Themes associés à la page)",
+                "seasons": "Saisons associées à la page",
+            }
         }
     }
 }
 ```
-
-### Playlists
-
-....
 
 ## :metal: Contributors
 
