@@ -31,11 +31,13 @@ Chaque événement respecte le format ci-dessous. Afin de simplifier le lien ave
             "name": "Nom de la fiche",
             "type": "Libellé de bordereau",
             "bordereau" : "Code du cordereau en 3 lettres",
-            "city": "Ville de la fiche"
+            "city": "Ville de la fiche",
+            "lang": "Langue de la fiche",
+            "season": "Saison de la fiche"
         },
         "playlist": {
             "id_playlist": "Identifiant de Playlist",
-            "name": "Nom de la Playlist",
+            "name": "Nom de la Playlist"
         },
         "page": {
             "id_page": "Identifiant de la page (nid ou post_id)",
@@ -45,7 +47,7 @@ Chaque événement respecte le format ci-dessous. Afin de simplifier le lien ave
             "tags": {
                 "places": "Lieux associé à la page",
                 "themes": "Themes associés à la page)",
-                "seasons": "Saisons associées à la page",
+                "seasons": "Saisons associées à la page"
             }
         }
     }
