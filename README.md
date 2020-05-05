@@ -20,7 +20,7 @@ Chaque événement respecte le format ci-dessous. Afin de simplifier le lien ave
     "event": "Nom de l'événement",
     "eventCategory": "Valeur de la Catégorie",
     "eventAction": "Valeur de l'Action",
-    "eventLabel": "Valeur du Label"
+    "eventLabel": "Valeur du Label",
     "data": {
         "ga": {
             "category": "Valeur de la Catégorie",
