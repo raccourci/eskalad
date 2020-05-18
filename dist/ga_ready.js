@@ -1,1 +1,5 @@
-"function" == typeof Event ? event = new Event("ga_ready") : (event = document.createEvent("Event"), event.initEvent("ga_ready", !0, !0)), console.log("[ESKALAD] ga_ready");
+(function () {
+    var evt = new Event("ga_ready");
+    document.dispatchEvent(evt);
+    console.log("[ESKALAD] ga_ready");
+})();
