@@ -1,0 +1,1 @@
+var eskaladEvent = function (e) { var n; return "function" == typeof Event ? n = new Event(e) : (n = document.createEvent("Event")).initEvent(e, !0, !0), n }; eskaladEvent("ga_ready"), console.log("[ESKALAD] ga_ready");
