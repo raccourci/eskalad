@@ -21,6 +21,7 @@ Chaque événement respecte le format ci-dessous. Afin de simplifier le lien ave
     "eventCategory": "Valeur de la Catégorie",
     "eventAction": "Valeur de l'Action",
     "eventLabel": "Valeur du Label",
+    "eventNonInteraction": "true|false",
     "data": {
         "ga": {
             "category": "Valeur de la Catégorie",
@@ -30,19 +31,64 @@ Chaque événement respecte le format ci-dessous. Afin de simplifier le lien ave
         "sheet": {
             "id_sheet": "Identifiant Fiche",
             "id_sit": "Identifiant SIT",
-            "id_reservation": "Identifiant centrale de réservation",
+            "id_reservation": "Identifiant centrale de réservation (etablissement)",
+            "id_reservation_product": "Identifiant centrale de réservation (offre)",
             "name": "Nom de la fiche",
             "type": "Libellé de bordereau",
             "bordereau" : "Code du cordereau en 3 lettres",
             "city": "Ville de la fiche",
             "lang": "Langue de la fiche",
-            "season": "Saison de la fiche"
+            "season": "Saison de la fiche",
+            "position": "Numéro de la position dans la liste",
+            "image_url": "URL de l'image"
         },
         "playlist": {
-            "id_playlist": "Identifiant de playlist",
-            "name": "Nom de la playlist",
-            "lang": "Langue de la playlist",
-            "season": "Saison de la playlist"
+            "id_playlist": "Identifiant de Playlist",
+            "name": "Nom de la Playlist",
+            "lang": "Langue de la fiche",
+            "season": "Saison de la fiche",
+            "pagination": "Numéro de la page de la playlist",
+            "sheets": [
+                {
+                    "id_sheet": "Identifiant Fiche",
+                    "id_sit": "Identifiant SIT",
+                    "id_reservation": "Identifiant centrale de réservation (etablissement)",
+                    "name": "Nom de la fiche",
+                    "type": "Libellé de bordereau", => compliqué dans ce contexte
+                    "bordereau" : "Code du cordereau en 3 lettres",
+                    "city": "Ville de la fiche",
+                    "lang": "Langue de la fiche",
+                    "season": "Saison de la fiche",
+                    "position": "Numéro de la position dans la liste",
+                    "image_url": "URL de l'image"
+                },
+                {
+                    "id_sheet": "Identifiant Fiche",
+                    "id_sit": "Identifiant SIT",
+                    "id_reservation": "Identifiant centrale de réservation (etablissement)",
+                    "name": "Nom de la fiche",
+                    "type": "Libellé de bordereau",
+                    "bordereau" : "Code du cordereau en 3 lettres",
+                    "city": "Ville de la fiche",
+                    "lang": "Langue de la fiche",
+                    "season": "Saison de la fiche",
+                    "position": "Numéro de la position dans la liste",
+                    "image_url": "URL de l'image"
+                }
+            ],
+            "filters": {
+                "Nom de la facette" : [
+                    Valeur sélectionnée,
+                    Valeur sélectionnée
+                ],
+                "Nom de la facette" : [
+                    Valeur sélectionnée,
+                    Valeur sélectionnée
+                ]
+            },
+            "last_filter": {
+                "Nom de la facette" : Valeur sélectionnée
+            }
         },
         "page": {
             "id_page": "Identifiant de la page (nid ou post_id)",
