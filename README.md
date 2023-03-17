@@ -9,7 +9,7 @@
 
 Sur chaque page d'un site Woody, un événements nommé "globals" défini un contexte global à la page. Cet événement étant le 1er envoyé dans le DataLayer, les données envoyées seront ensuite accessibles dans tous les événements suivants. Voici les données pouvant être envoyées dans "globals"
 
-```jsonc
+```javascript
 {
     "event": "globals",
     "data": {
