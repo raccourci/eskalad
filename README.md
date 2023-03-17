@@ -125,6 +125,15 @@ hawwwai_sheet_contact_form_sent | Formulaire de contact (envoyé) | ```Optin: Pr
 hawwwai_sheet_reveal_phone | Clic numéro de téléphone | ```Numero de téléphone```
 hawwwai_sheet_social_network | Clic réseaux sociaux | twitter, facebook
 
+#### :speech_balloon: Liste des évenements Hawwwai "Playlist"
+
+event | Nom | Valeur
+-------------------------- | --- | ------
+hawwwai_playlist_sheet_booking | Clic bouton "réserver" de la fiche | ```Nom de la fiche + Identifiant de fiche```
+hawwwai_playlist_sheet_click | Clic sur la fiche | ```Nom de la fiche + Identifiant de fiche```
+hawwwai_playlist_filter_click | Clic sur un filtre | ```Nom de la facette + Valeur sélectionnée```
+hawwwai_playlist_pagination_click | Clic sur la pagination | ```Numéro de la page```
+
 #### :warning: "Catégorie" n'est plus utilisée sur GA4 mais encore sur Matomo ou GA3
 
 Type | Catégorie
