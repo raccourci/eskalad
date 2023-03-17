@@ -83,18 +83,33 @@ Voici à quoi ressemble un événement envoyé à GTM depuis un site Woody :
 }
 ```
 
-#### :speech_balloon: Liste des évenements
+#### :speech_balloon: Liste des évenements Woody "Générique"
 
 event | Nom | Valeur
 -------------------------- | --- | ------
-woody_click_social_network | Partager réseaux sociaux | twitter, facebook, pinterest, linkedin, whatsapp, mail
-woody_click_add_favorites | Ajout aux favoris | ```null```
-woody_click_submit_form | Soumission du formulaire Nurtik | ```Identifiant du formulaire Nurtik```
-woody_click_submenu_link_desktop | Menu principal (desktop) | ```Texte du bouton + URL du lien```
-woody_click_submenu_link_mobile | Menu principal (mobile) | ```Texte du bouton + URL du lien```
-woody_click_favorites_cart | Accéder à la page "mes favoris" | ```null```
-woody_click_search | Accès au moteur de recherche | ```null```
-woody_click_lang_switcher | Accès au sélecteur de langue | ```null```
+woody_page_click_social_network | Partager réseaux sociaux | twitter, facebook, pinterest, linkedin, whatsapp, mail
+woody_page_click_add_favorites | Ajout aux favoris | ```null```
+woody_page_click_submit_form | Soumission du formulaire Nurtik | ```Identifiant du formulaire Nurtik```
+woody_page_click_submenu_link_desktop | Menu principal (desktop) | ```Texte du bouton + URL du lien```
+woody_page_click_submenu_link_mobile | Menu principal (mobile) | ```Texte du bouton + URL du lien```
+woody_page_click_favorites_cart | Accéder à la page "mes favoris" | ```null```
+woody_page_click_search | Accès au moteur de recherche | ```null```
+woody_page_click_lang_switcher | Accès au sélecteur de langue | ```null```
+
+#### :speech_balloon: Liste des évenements Woody "Bons plans"
+
+event | Nom | Valeur
+-------------------------- | --- | ------
+woody_page_click_deal_action | Clic d'ajout au pass | ```Identifiant et titre du Pass```
+woody_page_click_deals_cart | Accès au panier Bons plans | ```Url de la page panier```
+woody_page_click_printable_deals | Impression de Bons plans | ```Identifiants des pass imprimés```
+
+#### :speech_balloon: Liste des évenements Woody "Publicités"
+
+event | Nom | Valeur
+-------------------------- | --- | ------
+woody_page_show_claim | Vue sur bloc de publicité | ```Titre et lien de publicité```
+woody_page_click_claim | Clic sur bloc de publicité | ```Titre et lien de publicité```
 
 #### :warning: "Catégorie" n'est plus utilisée sur GA4 mais encore sur Matomo ou GA3
 
