@@ -83,10 +83,20 @@ Voici à quoi ressemble un événement envoyé à GTM depuis un site Woody :
 }
 ```
 
-event   | Catégorie | Nom      | Valeur
-------- | --------- | -------- | --------
-woody_click_social_network | : Code Langue&#x7c;PAGE&#x7c;Titre de la page&#x7c;Identifiant Page : | Partager réseaux sociaux | twitter, facebook, pinterest, linkedin, whatsapp, mail
-woody_click_add_favorites | | Ajout aux favoris |
+### :warning: La "Catégorie" n'est plus utilisée sur GA4
+
+Type | Catégorie | Exemple
+---- | --------- | -------
+Page du site | Langue&#x7c;PAGE&#x7c;Titre de la page&#x7c;Identifiant Page | FR&#x7c;PAGE&#x7c;Mon titre de page&#x7c;1234
+Playlist Tourisme | Langue&#x7c;PLAYLIST&#x7c;Nom de la playlist&#x7c;Identifiant de la playlist | FR&#x7c;PLAYLIST&#x7c;Restaurants&#x7c;6789
+Fiche Tourisme | Langue&#x7c;FICHE&#x7c;Bordereau&#x7c;Nom&#x7c;Identifiant Fiche&#x7c;Identifiant SIT | FR&#x7c;FICHE&#x7c;RES&#x7c;La Terrasse&#x7c;2008022&#x7c;PREFIX-RESWS0560001260
+
+### :finger: Liste des évenements
+
+event | Nom | Valeur
+----- | --- | ------
+woody_click_social_network | Partager réseaux sociaux | twitter, facebook, pinterest, linkedin, whatsapp, mail
+woody_click_add_favorites | Ajout aux favoris |
 
 ## :metal: Contributors
 
