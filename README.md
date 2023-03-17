@@ -46,7 +46,7 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
 
 ## :fire: Evénements
 
-Par défaut, des zones de clics sont déja analysées par un plan de marquage générique à tous les sites Woody.
+Par défaut, des zones de clics sont déjà analysées par un plan de marquage générique à tous les sites Woody.
 A chaque zone de clic, nous envoyons à GTM un lot de donnée en fonction avec un pré-formatage pour chaque outil de mesure (GA3, GA4, Matomo, ATInternet). Si l'outil d'analyse n'est pas présent sur le site, la donnée formatée n'est pas envoyée.
 
 Voici à quoi ressemble un événement envoyé à GTM depuis un site Woody :
