@@ -88,18 +88,21 @@ Voici à quoi ressemble un événement envoyé à GTM depuis un site Woody :
 event | Nom | Valeur
 -------------------------- | --- | ------
 woody_click_social_network | Partager réseaux sociaux | twitter, facebook, pinterest, linkedin, whatsapp, mail
-woody_click_add_favorites | Ajout aux favoris |
+woody_click_add_favorites | Ajout aux favoris | ```null```
 woody_click_submit_form | Soumission du formulaire Nurtik | ```Identifiant du formulaire Nurtik```
 woody_click_submenu_link_desktop | Menu principal (desktop) | ```Texte du bouton + URL du lien```
 woody_click_submenu_link_mobile | Menu principal (mobile) | ```Texte du bouton + URL du lien```
+woody_click_favorites_cart | Accéder à la page "mes favoris" | ```null```
+woody_click_search | Accès au moteur de recherche | ```null```
+woody_click_lang_switcher | Accès au sélecteur de langue | ```null```
 
 #### :warning: "Catégorie" n'est plus utilisée sur GA4 mais encore sur Matomo ou GA3
 
 Type | Catégorie
 ---- | ---------
-Page du site | ```Langue&#x7c;PAGE&#x7c;Titre de la page&#x7c;Identifiant Page```
-Playlist Tourisme | ```Langue&#x7c;PLAYLIST&#x7c;Nom de la playlist&#x7c;Identifiant de la playlist```
-Fiche Tourisme | ```Langue&#x7c;FICHE&#x7c;Bordereau&#x7c;Nom&#x7c;Identifiant Fiche&#x7c;Identifiant SIT```
+Page du site | Langue&#x7c;PAGE&#x7c;Titre de la page&#x7c;Identifiant Page
+Playlist Tourisme | Langue&#x7c;PLAYLIST&#x7c;Nom de la playlist&#x7c;Identifiant de la playlist
+Fiche Tourisme | Langue&#x7c;FICHE&#x7c;Bordereau&#x7c;Nom&#x7c;Identifiant Fiche&#x7c;Identifiant SIT
 
 ## :metal: Contributors
 
