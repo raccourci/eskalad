@@ -85,8 +85,8 @@ Voici à quoi ressemble un événement envoyé à GTM depuis un site Woody :
 
 event   | Catégorie | Nom      | Valeur
 ------- | --------- | -------- | --------
-woody_click_social_network | Code Langue&#x7c;PAGE&#x7c;Titre de la page&#x7c;Identifiant Page | Partager réseaux sociaux | twitter, facebook, pinterest, linkedin, whatsapp, mail
-woody_click_add_favorites | Code Langue&#x7c;PAGE&#x7c;Titre de la page&#x7c;Identifiant Page | Ajout aux favoris |
+woody_click_social_network | : Code Langue&#x7c;PAGE&#x7c;Titre de la page&#x7c;Identifiant Page : | Partager réseaux sociaux | twitter, facebook, pinterest, linkedin, whatsapp, mail
+woody_click_add_favorites | | Ajout aux favoris |
 
 ## :metal: Contributors
 
