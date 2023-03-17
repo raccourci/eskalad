@@ -75,7 +75,7 @@ Voici à quoi ressemble un événement envoyé à GTM depuis un site Woody :
     "at": {
         "enable": true,
         "name": "{Nom} - {Valeur}",
-        "type": "action", // Valeurs possibles : action, download, exit
+        "type": "action", // Valeurs possibles : action, navigation, download, exit
         "chapter1": "Chapitre 1",
         "chapter2": "Chapitre 2",
         "chapter3": "Chapitre 3",
