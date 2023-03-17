@@ -88,13 +88,13 @@ Voici à quoi ressemble un événement envoyé à GTM depuis un site Woody :
 event | Nom | Valeur
 -------------------------- | --- | ------
 woody_page_click_social_network | Partager réseaux sociaux | twitter, facebook, pinterest, linkedin, whatsapp, mail
-woody_page_click_add_favorites | Ajout aux favoris | ```null```
+woody_page_click_add_favorites | Ajout aux favoris |
 woody_page_click_submit_form | Soumission du formulaire Nurtik | ```Identifiant du formulaire Nurtik```
 woody_page_click_submenu_link_desktop | Menu principal (desktop) | ```Texte du bouton + URL du lien```
 woody_page_click_submenu_link_mobile | Menu principal (mobile) | ```Texte du bouton + URL du lien```
-woody_page_click_favorites_cart | Accéder à la page "mes favoris" | ```null```
-woody_page_click_search | Accès au moteur de recherche | ```null```
-woody_page_click_lang_switcher | Accès au sélecteur de langue | ```null```
+woody_page_click_favorites_cart | Accéder à la page "mes favoris" |
+woody_page_click_search | Accès au moteur de recherche |
+woody_page_click_lang_switcher | Accès au sélecteur de langue |
 
 #### :speech_balloon: Liste des évenements Woody "Bons plans"
 
@@ -116,11 +116,11 @@ woody_page_click_claim | Clic sur bloc de publicité | ```Titre et lien de publi
 event | Nom | Valeur
 -------------------------- | --- | ------
 hawwwai_sheet_website | Clic site internet du prestataire | ```URL du site```
-hawwwai_sheet_booking | Clic bouton "réserver" | ```null```
-hawwwai_sheet_buy | Clic bouton "acheter" | ```null```
+hawwwai_sheet_booking | Clic bouton "réserver" |
+hawwwai_sheet_buy | Clic bouton "acheter" |
 hawwwai_sheet_download_pdf | Clic téléchargement PDF | ```URL du fichier```
 hawwwai_sheet_download_itinerary | Clic téléchargement GPX/KML | ```URL du fichier```
-hawwwai_sheet_contact_form_opened | Formulaire de contact (ouvert) | ```null```
+hawwwai_sheet_contact_form_opened | Formulaire de contact (ouvert) |
 hawwwai_sheet_contact_form_sent | Formulaire de contact (envoyé) | ```Optin: Prestataire + Newsletter```
 hawwwai_sheet_reveal_phone | Clic numéro de téléphone | ```Numero de téléphone```
 hawwwai_sheet_social_network | Clic réseaux sociaux | twitter, facebook
