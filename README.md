@@ -94,9 +94,9 @@ Fiche Tourisme | Langue&#x7c;FICHE&#x7c;Bordereau&#x7c;Nom&#x7c;Identifiant Fich
 ### :speech_balloon: Liste des évenements
 
 event | Nom | Valeur
------ | --- | ------
+-------------------------- | --- | ------
 woody_click_social_network | Partager réseaux sociaux | twitter, facebook, pinterest, linkedin, whatsapp, mail
-woody_click_add_favorites | Ajout aux favoris |
+woody_click_add_favorites  | Ajout aux favoris |
 
 ## :metal: Contributors
 
