@@ -7,7 +7,7 @@
 
 ## :fire: Datalayer "Globals"
 
-Sur chaque page d'un site Woody, un événements nommé "globals" défini un contexte global à la page. Cet événement étant le 1er envoyé dans le DataLayer, les données envoyées seront ensuite accessibles dans tous les événements suivants. Voici les données pouvant être envoyées dans "globals"
+Sur chaque page d'un site Woody, un événements nommé "globals" défini un contexte global à la page. Cet événement étant le 1er envoyé dans le DataLayer, les données envoyées seront ensuite accessibles dans tous les événements suivants. Voici les données pouvant être envoyées dans "globals".
 
 ```javascript
 {
@@ -43,6 +43,50 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
     }
 }
 ```
+
+## :fire: Evénements
+
+Par défaut, des zones de clics sont déja analysées par un plan de marquage générique à tous les sites Woody.
+A chaque zone de clic, nous envoyons à GTM un lot de donnée en fonction avec un pré-formatage pour chaque outil de mesure (GA3, GA4, Matomo, ATInternet). Si l'outil d'analyse n'est pas présent sur le site, la donnée formatée n'est pas envoyée.
+
+Voici à quoi ressemble un événement envoyé à GTM depuis un site Woody :
+
+```javascript
+{
+    "event": "woody_click_xxxxxx",
+    "ga": {
+        "enable": true,
+        "category": "Catégorie",
+        "action": "Nom",
+        "label": "Valeur",
+        "non_interaction": false
+    },
+    "ga4": {
+        "enable": true,
+        "name": "Nom",
+        "label": "Valeur",
+    },
+    "matomo": {
+        "enable": true,
+        "category": "Catégorie",
+        "action": "Nom",
+        "name": "Valeur",
+    },
+    "at": {
+        "enable": true,
+        "name": "Nom - Valeur",
+        "type": "action", // Valeurs possibles : action, download, exit
+        "chapter1": "Chapitre 1",
+        "chapter2": "Chapitre 2",
+        "chapter3": "Chapitre 3",
+    }
+}
+```
+
+event   | Catégorie | Nom      | Valeur
+------- | --------- | -------- | --------
+woody_click_social_network | "Code Langue|PAGE|Titre de la page|Identifiant Page" | Partager réseaux sociaux | twitter,facebook
+Texte   | Texte
 
 ## :metal: Contributors
 
