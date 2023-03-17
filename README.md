@@ -56,25 +56,25 @@ Voici à quoi ressemble un événement envoyé à GTM depuis un site Woody :
     "event": "woody_click_xxxxxx",
     "ga": {
         "enable": true,
-        "category": "Catégorie",
-        "action": "Nom",
-        "label": "Valeur",
+        "category": "{Catégorie}", // Exemple: FR|PAGE|Mon titre de page|1234
+        "action": "{Nom}", // Exemple : Partager réseaux sociaux
+        "label": "{Valeur}", // Exemple : twitter
         "non_interaction": false
     },
     "ga4": {
         "enable": true,
-        "name": "Nom",
-        "label": "Valeur",
+        "name": "{Nom}",
+        "label": "{Valeur}",
     },
     "matomo": {
         "enable": true,
-        "category": "Catégorie",
-        "action": "Nom",
-        "name": "Valeur",
+        "category": "{Catégorie}",
+        "action": "{Nom}",
+        "name": "{Valeur}",
     },
     "at": {
         "enable": true,
-        "name": "Nom - Valeur",
+        "name": "{Nom} - {Valeur}",
         "type": "action", // Valeurs possibles : action, download, exit
         "chapter1": "Chapitre 1",
         "chapter2": "Chapitre 2",
@@ -83,15 +83,15 @@ Voici à quoi ressemble un événement envoyé à GTM depuis un site Woody :
 }
 ```
 
-### :warning: La "Catégorie" n'est plus utilisée sur GA4
+### :warning: "{Catégorie}" n'est plus utilisée sur GA4
 
-Type | Catégorie | Exemple
----- | --------- | -------
-Page du site | Langue&#x7c;PAGE&#x7c;Titre de la page&#x7c;Identifiant Page | FR&#x7c;PAGE&#x7c;Mon titre de page&#x7c;1234
-Playlist Tourisme | Langue&#x7c;PLAYLIST&#x7c;Nom de la playlist&#x7c;Identifiant de la playlist | FR&#x7c;PLAYLIST&#x7c;Restaurants&#x7c;6789
-Fiche Tourisme | Langue&#x7c;FICHE&#x7c;Bordereau&#x7c;Nom&#x7c;Identifiant Fiche&#x7c;Identifiant SIT | FR&#x7c;FICHE&#x7c;RES&#x7c;La Terrasse&#x7c;2008022&#x7c;PREFIX-RESWS0560001260
+Type | Catégorie
+---- | ---------
+Page du site | Langue&#x7c;PAGE&#x7c;Titre de la page&#x7c;Identifiant Page
+Playlist Tourisme | Langue&#x7c;PLAYLIST&#x7c;Nom de la playlist&#x7c;Identifiant de la playlist
+Fiche Tourisme | Langue&#x7c;FICHE&#x7c;Bordereau&#x7c;Nom&#x7c;Identifiant Fiche&#x7c;Identifiant SIT
 
-### :finger: Liste des évenements
+### :speech_balloon: Liste des évenements
 
 event | Nom | Valeur
 ----- | --- | ------
