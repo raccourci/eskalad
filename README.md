@@ -38,7 +38,7 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
             "name" => "Restaurant \"La Terrasse\" - La Rochelle", // Nom de la fiche
             "bordereau" => "Restauration", // Bordereau de la fiche (Restauration, Hôtellerie ...)
             "type" => "RES", // Bordereau de la fiche (RES, HOT, HLO, HPA, VIL, DEG, PCU, PNA ...)
-            "city" => "La Rochelle", // Ville de la fiche
+            "city" => "La Rochelle" // Ville de la fiche
         }
     }
 }
