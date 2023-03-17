@@ -88,7 +88,10 @@ Voici à quoi ressemble un événement envoyé à GTM depuis un site Woody :
 event | Nom | Valeur
 -------------------------- | --- | ------
 woody_click_social_network | Partager réseaux sociaux | twitter, facebook, pinterest, linkedin, whatsapp, mail
-woody_click_add_favorites  | Ajout aux favoris |
+woody_click_add_favorites | Ajout aux favoris |
+woody_click_submit_form | Soumission du formulaire Nurtik | ```Identifiant du formulaire Nurtik```
+woody_click_submenu_link_desktop | Menu principal (desktop) | ```Texte du bouton + URL du lien```
+woody_click_submenu_link_mobile | Menu principal (mobile) | ```Texte du bouton + URL du lien```
 
 #### :warning: "Catégorie" n'est plus utilisée sur GA4 mais encore sur Matomo ou GA3
 
