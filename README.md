@@ -97,9 +97,9 @@ woody_click_submenu_link_mobile | Menu principal (mobile) | ```Texte du bouton +
 
 Type | Catégorie
 ---- | ---------
-Page du site | ```Langue|PAGE|Titre de la page|Identifiant Page```
-Playlist Tourisme | ```Langue|PLAYLIST|Nom de la playlist|Identifiant de la playlist```
-Fiche Tourisme | ```Langue|FICHE|Bordereau|Nom|Identifiant Fiche|Identifiant SIT```
+Page du site | ```Langue&#x7c;PAGE&#x7c;Titre de la page&#x7c;Identifiant Page```
+Playlist Tourisme | ```Langue&#x7c;PLAYLIST&#x7c;Nom de la playlist&#x7c;Identifiant de la playlist```
+Fiche Tourisme | ```Langue&#x7c;FICHE&#x7c;Bordereau&#x7c;Nom&#x7c;Identifiant Fiche&#x7c;Identifiant SIT```
 
 ## :metal: Contributors
 
