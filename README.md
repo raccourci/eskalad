@@ -13,9 +13,9 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
 {
     "event": "globals",
     "data": {
-        "lang" => "fr|en|de|it|es|nl",
-        "season" => "hiver|ete", // Default : null
-        "area" => "main" // Default : null
+        "lang" => "fr", // Valeurs possibles : fr, en, de, it, es, nl ...
+        "season" => null, // Valeurs possibles : hiver, ete ...
+        "area" => null // Valeurs possibles : main, groupes, pros ...
     }
 }
 ```
