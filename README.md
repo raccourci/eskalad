@@ -111,6 +111,20 @@ event | Nom | Valeur
 woody_page_show_claim | Vue sur bloc de publicité | ```Titre et lien de publicité```
 woody_page_click_claim | Clic sur bloc de publicité | ```Titre et lien de publicité```
 
+#### :speech_balloon: Liste des évenements Hawwwai "Fiche"
+
+event | Nom | Valeur
+-------------------------- | --- | ------
+hawwwai_sheet_website | Clic site internet du prestataire | ```URL du site```
+hawwwai_sheet_booking | Clic bouton "réserver" | ```null```
+hawwwai_sheet_buy | Clic bouton "acheter" | ```null```
+hawwwai_sheet_download_pdf | Clic téléchargement PDF | ```URL du fichier```
+hawwwai_sheet_download_itinerary | Clic téléchargement GPX/KML | ```URL du fichier```
+hawwwai_sheet_contact_form_opened | Formulaire de contact (ouvert) | ```null```
+hawwwai_sheet_contact_form_sent | Formulaire de contact (envoyé) | ```Optin: Prestataire + Newsletter```
+hawwwai_sheet_reveal_phone | Clic numéro de téléphone | ```Numero de téléphone```
+hawwwai_sheet_social_network | Clic réseaux sociaux | twitter, facebook
+
 #### :warning: "Catégorie" n'est plus utilisée sur GA4 mais encore sur Matomo ou GA3
 
 Type | Catégorie
