@@ -96,6 +96,13 @@ woody_page_click_favorites_cart | Accéder à la page "mes favoris" |
 woody_page_click_search | Accès au moteur de recherche |
 woody_page_click_lang_switcher | Accès au sélecteur de langue |
 
+#### :speech_balloon: Liste des évenements Woody "Publicités"
+
+event | Nom | Valeur
+-------------------------- | --- | ------
+woody_page_show_claim | Vue sur bloc de publicité | ```Titre et lien de publicité```
+woody_page_click_claim | Clic sur bloc de publicité | ```Titre et lien de publicité```
+
 #### :speech_balloon: Liste des évenements Woody "Bons plans"
 
 event | Nom | Valeur
@@ -103,13 +110,6 @@ event | Nom | Valeur
 woody_page_click_deal_action | Clic d'ajout au pass | ```Identifiant et titre du Pass```
 woody_page_click_deals_cart | Accès au panier Bons plans | ```Url de la page panier```
 woody_page_click_printable_deals | Impression de Bons plans | ```Identifiants des pass imprimés```
-
-#### :speech_balloon: Liste des évenements Woody "Publicités"
-
-event | Nom | Valeur
--------------------------- | --- | ------
-woody_page_show_claim | Vue sur bloc de publicité | ```Titre et lien de publicité```
-woody_page_click_claim | Clic sur bloc de publicité | ```Titre et lien de publicité```
 
 #### :speech_balloon: Liste des évenements Hawwwai "Fiche"
 
@@ -141,6 +141,17 @@ Type | Catégorie
 Page du site | Langue&#x7c;PAGE&#x7c;Titre de la page&#x7c;Identifiant Page
 Playlist Tourisme | Langue&#x7c;PLAYLIST&#x7c;Nom de la playlist&#x7c;Identifiant de la playlist
 Fiche Tourisme | Langue&#x7c;FICHE&#x7c;Bordereau&#x7c;Nom&#x7c;Identifiant Fiche&#x7c;Identifiant SIT
+
+## :fire: Moteur de recherche
+
+Un événement spécifique est envoyé lorsque que le moteur de recherche interne au site est utilisé
+
+```javascript
+{
+    "event": "view_search_results",
+    "search_term": "Mots recherchés"
+}
+```
 
 ## :metal: Contributors
 
