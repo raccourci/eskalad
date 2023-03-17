@@ -142,7 +142,7 @@ Page du site | Langue&#x7c;PAGE&#x7c;Titre de la page&#x7c;Identifiant Page
 Playlist Tourisme | Langue&#x7c;PLAYLIST&#x7c;Nom de la playlist&#x7c;Identifiant de la playlist
 Fiche Tourisme | Langue&#x7c;FICHE&#x7c;Bordereau&#x7c;Nom&#x7c;Identifiant Fiche&#x7c;Identifiant SIT
 
-## :fire: Moteur de recherche
+## :mag_right: Moteur de recherche
 
 Un événement spécifique est envoyé lorsque que le moteur de recherche interne au site est utilisé
 
@@ -152,6 +152,14 @@ Un événement spécifique est envoyé lorsque que le moteur de recherche intern
     "search_term": "Mots recherchés"
 }
 ```
+
+## :bulb: Documentation
+
+L'ancienne documentation des événements GTM envoyés par Hawwwai, Woody et RoadBook est détaillée dans ce document :
+
+:ledger: [Google Sheet : Eskalad - GTM Events](https://docs.google.com/spreadsheets/d/1-MoWKIZ33HDxQhO8VjEm4PydfChZRBImAtM37vJOFt4/edit?usp=sharing)
+
+---
 
 ## :metal: Contributors
 
