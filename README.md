@@ -36,8 +36,8 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
             "id_sit" => "PREFIX-RESWS0560001260", // Identifiant SIT source de la fiche (Apidae, Tourinsoft ...)
             "id_reservation" => 1, // Identifiant de réservation (Regiondo, Elloha, OpenSystem, MSEM ...)
             "name" => "Restaurant \"La Terrasse\" - La Rochelle", // Nom de la fiche
-            "bordereau" => "Restauration", // Bordereau de la fiche (Restauration, Hôtellerie ...)
-            "type" => "RES", // Bordereau de la fiche (RES, HOT, HLO, HPA, VIL, DEG, PCU, PNA ...)
+            "type" => "Restauration", // Bordereau de la fiche (Restauration, Hôtellerie ...)
+            "bordereau" => "RES", // Bordereau de la fiche (RES, HOT, HLO, HPA, VIL, DEG, PCU, PNA ...)
             "city" => "La Rochelle" // Ville de la fiche
         }
     }
