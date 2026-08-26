@@ -111,6 +111,32 @@ woody_page_click_deal_action | Clic d'ajout au pass | ```Identifiant et titre du
 woody_page_click_deals_cart | Accès au panier Bons plans | ```Url de la page panier```
 woody_page_click_printable_deals | Impression de Bons plans | ```Identifiants des pass imprimés```
 
+#### :speech_balloon: Liste des évenements Woody "Access Config"
+
+event | Nom 
+-------------------------- | --- 
+woody_page_click_deal_action | Access Config : Application du contrast par défaut
+woody_page_accessconfig_gray_contrast | Access Config : Application du niveau de gris
+woody_page_accessconfig_high_contrast | Access Config : Renforcement des contrastes
+woody_page_accessconfig_inv_contrast | Access Config : Inversion des contrastes
+woody_page_accessconfig_default_font | Access Config : Application de la police par défaut
+woody_page_accessconfig_dys_font | Access Config : Application de la police adaptée à la dyslexie
+woody_page_accessconfig_default_spacing | Access Config : Application de l'interlignage par défaut
+woody_page_accessconfig_dys_spacing | Access Config : Augmentation de l'interlignage
+woody_page_accessconfig_default_justification | Access Config : Application de la justification par défaut
+woody_page_accessconfig_cancel_justification | Access Config : Application de la justification par défaut
+woody_page_accessconfig_default_img | Access Config : Affichage des images par défaut
+woody_page_accessconfig_text_img | Access Config : Remplacement des images par du texte
+woody_page_accessconfig_default_animations | Access Config : Activation des animations
+woody_page_accessconfig_stop_animations | Access Config : Arrêt des animations
+woody_page_accessconfig_default_links | Access Config : Affichage des liens par défaut
+woody_page_accessconfig_improve_links | Access Config : Mise en évidence des liens
+woody_page_accessconfig_default_fontsize | Access Config : Application de la taille de police par défaut
+woody_page_accessconfig_fontsize_125 | Access Config : Agrandissement de la police x1,25
+woody_page_accessconfig_fontsize_150 | Access Config : Agrandissement de la police x1,5
+woody_page_accessconfig_fontsize_200 | Access Config : Agrandissement de la police x2
+
+
 #### :speech_balloon: Liste des évenements Hawwwai "Fiche"
 
 event | Nom | Valeur
