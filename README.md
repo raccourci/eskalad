@@ -21,19 +21,22 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
             "name" => "Mon titre de page",
             "page_type" => "front_page", // Valeurs possibles : front_page, basic_page, playlist_tourism ...
             "tags" => { // Correspond à des tags mis sur le post WP (toujours dans la langue par défaut du site)
-                "places" => ["Ma ville", "Mon lieu dit"],
+                "places" => ["Vannes", "Morbihan"],
                 "seasons" => ["Hiver"],
-                "themes" => ["Famille", "Culture"],
+                "themes" => ["Randos", "Culture"],
+                "themes" => ["Famille", "Sénior"]
             },
-            "flat_tags" => { // Mêmes tags que "tags", avec une chaîne de termes séparés par "|" par taxonomie
-                "places" => "Ma ville|Mon lieu dit",
-                "seasons" => "Hiver",
-                "themes" => "Famille|Culture",
+            "flat_tags" => { // Slugs des termes (langue par défaut) séparés par "|" par taxonomie
+                "places" => "vannes|morbihan",
+                "seasons" => "hiver",
+                "themes" => "randos|culture",
+                "targets" => "famille|senior"
             },
             "flat_tags_ids" => { // Identifiants des termes (langue par défaut) séparés par "|" par taxonomie
                 "places" => "12|34",
                 "seasons" => "5",
                 "themes" => "7|8",
+                "targets" => "56|89",
             }
         },
         "playlist" => {
@@ -59,7 +62,7 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
 - Les taxonomies remontées sont `places`, `seasons`, `themes`, `targets` (extensible via le filtre `woody_datalayer_tags`), auxquelles s'ajoutent les autres taxonomies publiques rattachées au type de contenu de la page. `page_type` n'est jamais remonté.
 - Une taxonomie sans terme n'est pas envoyée ; sans aucun tag, `tags`, `flat_tags` et `flat_tags_ids` valent `null`.
 - Les termes sont toujours envoyés dans la langue par défaut du site (traduction Polylang, avec repli sur le terme d'origine si elle n'existe pas).
-- Dans `tags`, les termes enfants sont regroupés sous le slug de leur parent ; dans `flat_tags` et `flat_tags_ids`, tous les termes d'une taxonomie sont aplatis dans une même chaîne.
+- Dans `tags`, les termes enfants sont regroupés sous le slug de leur parent ; `flat_tags` (slugs) et `flat_tags_ids` (identifiants) contiennent tous les termes d'une taxonomie, enfants compris, aplatis dans une même chaîne.
 
 #### :warning: Limite de 100 caractères sur GA4
 
