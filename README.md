@@ -57,14 +57,23 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
             "name" => "Evasion en Loire", // Nom du produit YouBook (dans la langue de la page)
             "id_product" => "addock:d0JmdVhzOGhXdTBoNFA3ZGYybkY6UFJPRFVDVDoyMTcyOA", // Identifiant YouBook du produit
             "provider" => "addock", // Source (fournisseur) du produit YouBook
-            "tags" => { // Thèmes du produit YouBook (nom YouBook, non traduit). tags, flat_tags et flat_tags_ids sont absents si le produit n'a aucun thème
-                "themes" => ["Loire et nature", "En famille"]
+            "tags" => { // Taxonomies du produit YouBook (nom YouBook, non traduit). Une taxonomie sans terme n'est pas envoyée ; sans aucun terme, tags, flat_tags et flat_tags_ids sont absents
+                "themes" => ["Loire et nature", "En famille"],
+                "types" => ["Croisières"],
+                "places" => ["Saumur"],
+                "targets" => ["Famille"] // Correspond aux "publics" (audiences) YouBook
             },
-            "flat_tags" => { // Slugs des thèmes séparés par "|"
-                "themes" => "loire-et-nature|en-famille"
+            "flat_tags" => { // Slugs des termes séparés par "|" par taxonomie
+                "themes" => "loire-et-nature|en-famille",
+                "types" => "croisieres",
+                "places" => "saumur",
+                "targets" => "famille"
             },
-            "flat_tags_ids" => { // Identifiants YouBook (UUID) des thèmes séparés par "|"
-                "themes" => "e2ac50cb-ea45-4520-b85b-d910f8000f84|4bb580b7-a03a-4d0d-ae41-72db60d96946"
+            "flat_tags_ids" => { // Identifiants YouBook (UUID) des termes séparés par "|" par taxonomie
+                "themes" => "e2ac50cb-ea45-4520-b85b-d910f8000f84|4bb580b7-a03a-4d0d-ae41-72db60d96946",
+                "types" => "66949aaa-3b4a-473c-8593-336b506fd79f",
+                "places" => "56cd4394-3795-4c90-9263-f53dae5ea9d2",
+                "targets" => "…"
             }
         }
     }
@@ -81,8 +90,8 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
 #### :speech_balloon: À propos du bloc "product" (YouBook)
 
 - Il est ajouté par l'addon `woody-addon-youbook` (filtre `woody_gtm_datalayer`) sur les pages d'un produit YouBook uniquement, en complément de `page`.
-- Seule la taxonomie `themes` est remontée, avec le même format que `page` (`tags`, `flat_tags`, `flat_tags_ids`).
-- Les thèmes sont lus dans les données du produit YouBook et non dans les termes WordPress. Les noms ne sont donc pas traduits, les slugs sont générés à partir du nom, et `flat_tags_ids` contient les identifiants YouBook (UUID) et non des `term_id` WordPress.
+- Les taxonomies remontées sont `themes`, `types`, `places` et `targets` (les « publics » / `audiences` de YouBook, renommés `targets` pour correspondre aux tags des pages), avec le même format que `page` (`tags`, `flat_tags`, `flat_tags_ids`).
+- Les termes sont lus dans les données du produit YouBook et non dans les termes WordPress. Les noms ne sont donc pas traduits, les slugs sont générés à partir du nom (les termes enfants ne sont pas regroupés sous leur parent), et `flat_tags_ids` contient les identifiants YouBook (UUID) et non des `term_id` WordPress.
 
 #### :warning: Limite de 100 caractères sur GA4
 
