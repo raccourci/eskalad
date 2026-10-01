@@ -52,6 +52,20 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
             "type" => "Restauration", // Bordereau de la fiche (Restauration, Hôtellerie ...)
             "bordereau" => "RES", // Bordereau de la fiche (RES, HOT, HLO, HPA, VIL, DEG, PCU, PNA ...)
             "city" => "La Rochelle" // Ville de la fiche
+        },
+        "product" => { // Uniquement sur les pages d'un produit YouBook
+            "name" => "Evasion en Loire", // Nom du produit YouBook (dans la langue de la page)
+            "id_product" => "addock:d0JmdVhzOGhXdTBoNFA3ZGYybkY6UFJPRFVDVDoyMTcyOA", // Identifiant YouBook du produit
+            "provider" => "addock", // Source (fournisseur) du produit YouBook
+            "tags" => { // Thèmes du produit YouBook (nom YouBook, non traduit). tags, flat_tags et flat_tags_ids sont absents si le produit n'a aucun thème
+                "themes" => ["Loire et nature", "En famille"]
+            },
+            "flat_tags" => { // Slugs des thèmes séparés par "|"
+                "themes" => "loire-et-nature|en-famille"
+            },
+            "flat_tags_ids" => { // Identifiants YouBook (UUID) des thèmes séparés par "|"
+                "themes" => "e2ac50cb-ea45-4520-b85b-d910f8000f84|4bb580b7-a03a-4d0d-ae41-72db60d96946"
+            }
         }
     }
 }
@@ -59,10 +73,16 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
 
 #### :speech_balloon: À propos des tags
 
-- Les taxonomies remontées sont `places`, `seasons`, `themes`, `targets` (extensible via le filtre `woody_datalayer_tags`), auxquelles s'ajoutent les autres taxonomies publiques rattachées au type de contenu de la page. `page_type` n'est jamais remonté.
+- Les taxonomies remontées sont `places`, `seasons`, `themes`, `targets` (extensible via le filtre `woody_datalayer_tags`), auxquelles s'ajoutent les autres taxonomies publiques rattachées au type de contenu de la page. `page_type` et `youbook_types` ne sont jamais remontés.
 - Une taxonomie sans terme n'est pas envoyée ; sans aucun tag, `tags`, `flat_tags` et `flat_tags_ids` valent `null`.
 - Les termes sont toujours envoyés dans la langue par défaut du site (traduction Polylang, avec repli sur le terme d'origine si elle n'existe pas).
 - Dans `tags`, les termes enfants sont regroupés sous le slug de leur parent ; `flat_tags` (slugs) et `flat_tags_ids` (identifiants) contiennent tous les termes d'une taxonomie, enfants compris, aplatis dans une même chaîne.
+
+#### :speech_balloon: À propos du bloc "product" (YouBook)
+
+- Il est ajouté par l'addon `woody-addon-youbook` (filtre `woody_gtm_datalayer`) sur les pages d'un produit YouBook uniquement, en complément de `page`.
+- Seule la taxonomie `themes` est remontée, avec le même format que `page` (`tags`, `flat_tags`, `flat_tags_ids`).
+- Les thèmes sont lus dans les données du produit YouBook et non dans les termes WordPress. Les noms ne sont donc pas traduits, les slugs sont générés à partir du nom, et `flat_tags_ids` contient les identifiants YouBook (UUID) et non des `term_id` WordPress.
 
 #### :warning: Limite de 100 caractères sur GA4
 
