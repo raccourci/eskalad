@@ -24,7 +24,7 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
                 "places" => ["Vannes", "Morbihan"],
                 "seasons" => ["Hiver"],
                 "themes" => ["Randos", "Culture"],
-                "themes" => ["Famille", "Sénior"]
+                "targets" => ["Famille", "Sénior"]
             },
             "flat_tags" => { // Slugs des termes (langue par défaut) séparés par "|" par taxonomie
                 "places" => "vannes|morbihan",
