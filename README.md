@@ -61,6 +61,10 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
 - Les termes sont toujours envoyés dans la langue par défaut du site (traduction Polylang, avec repli sur le terme d'origine si elle n'existe pas).
 - Dans `tags`, les termes enfants sont regroupés sous le slug de leur parent ; dans `flat_tags` et `flat_tags_ids`, tous les termes d'une taxonomie sont aplatis dans une même chaîne.
 
+#### :warning: Limite de 100 caractères sur GA4
+
+Une définition personnalisée GA4 est limitée à 100 caractères. Les valeurs de `flat_tags` (et de `flat_tags_ids`) étant des chaînes concaténées, elles peuvent donc être tronquées par GA4 lorsqu'une taxonomie contient beaucoup de termes.
+
 ## :fire: Evénements
 
 Par défaut, des zones de clics sont déjà analysées par un plan de marquage générique à tous les sites Woody.
