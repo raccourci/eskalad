@@ -20,10 +20,20 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
             "id_page" => 1234, // Correspond à l"ID du post WP
             "name" => "Mon titre de page",
             "page_type" => "front_page", // Valeurs possibles : front_page, basic_page, playlist_tourism ...
-            "tags" => { // Correspond à des tags mis sur le post WP
+            "tags" => { // Correspond à des tags mis sur le post WP (toujours dans la langue par défaut du site)
                 "places" => ["Ma ville", "Mon lieu dit"],
                 "seasons" => ["Hiver"],
                 "themes" => ["Famille", "Culture"],
+            },
+            "flat_tags" => { // Mêmes tags que "tags", avec une chaîne de termes séparés par "|" par taxonomie
+                "places" => "Ma ville|Mon lieu dit",
+                "seasons" => "Hiver",
+                "themes" => "Famille|Culture",
+            },
+            "flat_tags_ids" => { // Identifiants des termes (langue par défaut) séparés par "|" par taxonomie
+                "places" => "12|34",
+                "seasons" => "5",
+                "themes" => "7|8",
             }
         },
         "playlist" => {
@@ -43,6 +53,13 @@ Sur chaque page d'un site Woody, un événements nommé "globals" défini un con
     }
 }
 ```
+
+#### :speech_balloon: À propos des tags
+
+- Les taxonomies remontées sont `places`, `seasons`, `themes`, `targets` (extensible via le filtre `woody_datalayer_tags`), auxquelles s'ajoutent les autres taxonomies publiques rattachées au type de contenu de la page. `page_type` n'est jamais remonté.
+- Une taxonomie sans terme n'est pas envoyée ; sans aucun tag, `tags`, `flat_tags` et `flat_tags_ids` valent `null`.
+- Les termes sont toujours envoyés dans la langue par défaut du site (traduction Polylang, avec repli sur le terme d'origine si elle n'existe pas).
+- Dans `tags`, les termes enfants sont regroupés sous le slug de leur parent ; dans `flat_tags` et `flat_tags_ids`, tous les termes d'une taxonomie sont aplatis dans une même chaîne.
 
 ## :fire: Evénements
 
@@ -113,8 +130,8 @@ woody_page_click_printable_deals | Impression de Bons plans | ```Identifiants de
 
 #### :speech_balloon: Liste des évenements Woody "Access Config"
 
-event | Nom 
--------------------------- | --- 
+event | Nom
+-------------------------- | ---
 woody_page_click_deal_action | Access Config : Application du contrast par défaut
 woody_page_accessconfig_gray_contrast | Access Config : Application du niveau de gris
 woody_page_accessconfig_high_contrast | Access Config : Renforcement des contrastes
@@ -178,12 +195,6 @@ Un événement spécifique est envoyé lorsque que le moteur de recherche intern
     "search_term": "Mots recherchés"
 }
 ```
-
-## :bulb: Documentation
-
-L'ancienne documentation des événements GTM envoyés par Hawwwai, Woody et RoadBook est détaillée dans ce document :
-
-:ledger: [Google Sheet : Eskalad - GTM Events](https://docs.google.com/spreadsheets/d/1-MoWKIZ33HDxQhO8VjEm4PydfChZRBImAtM37vJOFt4/edit?usp=sharing)
 
 ---
 
