@@ -148,6 +148,8 @@ woody_page_click_submenu_link_mobile | Menu principal (mobile) | ```Texte du bou
 woody_page_click_favorites_cart | Accéder à la page "mes favoris" |
 woody_page_click_search | Accès au moteur de recherche |
 woody_page_click_lang_switcher | Accès au sélecteur de langue |
+woody_page_click_tel_link | Clic lien téléphone (contenu éditorial, hors fiches SIT) | ```Numéro de téléphone```
+woody_page_click_mailto_link | Clic lien e-mail (contenu éditorial, hors fiches SIT) | ```Domaine de l'adresse e-mail```
 
 #### :speech_balloon: Liste des évenements Woody "Publicités"
 
