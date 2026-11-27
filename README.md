@@ -202,6 +202,7 @@ hawwwai_sheet_download_itinerary | Clic téléchargement GPX/KML | ```URL du fic
 hawwwai_sheet_contact_form_opened | Formulaire de contact (ouvert) |
 hawwwai_sheet_contact_form_sent | Formulaire de contact (envoyé) | ```Optin: Prestataire + Newsletter```
 hawwwai_sheet_reveal_phone | Clic numéro de téléphone | ```Numero de téléphone```
+hawwwai_sheet_call_phone | Clic sur le numéro de téléphone une fois affiché (numéros masqués uniquement) | ```Numero de téléphone```
 hawwwai_sheet_social_network | Clic réseaux sociaux | twitter, facebook
 
 #### :speech_balloon: Liste des évenements Hawwwai "Playlist"
