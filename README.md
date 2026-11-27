@@ -141,15 +141,27 @@ Voici à quoi ressemble un événement envoyé à GTM depuis un site Woody :
 event | Nom | Valeur
 -------------------------- | --- | ------
 woody_page_click_social_network | Partager réseaux sociaux | twitter, facebook, pinterest, linkedin, whatsapp, mail
-woody_page_click_add_favorites | Ajout aux favoris |
+woody_page_click_add_favorites | Ajout aux favoris | ```Langue + type de page + titre + identifiant```
+woody_page_click_favorites_cart | Accéder à la page "mes favoris" |
+woody_page_click_favorites_print_export | Clic sur "Imprimer/Exporter mes favoris" |
 woody_page_click_submit_form | Soumission du formulaire Nurtik | ```Identifiant du formulaire Nurtik```
 woody_page_click_submenu_link_desktop | Menu principal (desktop) | ```Texte du bouton + URL du lien```
 woody_page_click_submenu_link_mobile | Menu principal (mobile) | ```Texte du bouton + URL du lien```
-woody_page_click_favorites_cart | Accéder à la page "mes favoris" |
 woody_page_click_search | Accès au moteur de recherche |
+woody_page_click_recherche | Recherche (desktop / mobile) | ```Terme recherché```
+woody_page_click_recherche_ia | Recherche IA (desktop / mobile) | ```Terme recherché```
 woody_page_click_lang_switcher | Accès au sélecteur de langue |
 woody_page_click_tel_link | Clic lien téléphone (contenu éditorial, hors fiches SIT) | ```Numéro de téléphone```
 woody_page_click_mailto_link | Clic lien e-mail (contenu éditorial, hors fiches SIT) | ```Domaine de l'adresse e-mail```
+woody_page_click_diaporama | Texte du bouton du diaporama |
+woody_page_click_content_list_filter | Nom du filtre (liste de contenus) | ```Valeur du filtre```
+woody_page_bookform_search | Recherche moteur de réservation |
+woody_page_click_webcam | Nom de la webcam |
+woody_page_{événement saisi} | Nom saisi en back-office | ```Texte et URL du lien```
+
+- `woody_page_click_recherche`, `woody_page_click_recherche_ia` : sur une fiche SIT, le préfixe devient `hawwwai_sheet_` (`hawwwai_sheet_click_recherche`).
+- `woody_page_{événement saisi}` : boutons, cartes, filtres et blocs pour lesquels le contributeur a renseigné un événement d'analytics en back-office.
+- Les liens sortants et les téléchargements de fichiers ne sont pas envoyés à GA4 : ils sont suivis nativement par les mesures améliorées GA4 (événements `click` et `file_download`). Eskalad ne les remonte qu'à Matomo et AT Internet (`woody_page_click_external_link`, `woody_page_click_file_link`).
 
 #### :speech_balloon: Liste des évenements Woody "Publicités"
 
@@ -170,7 +182,8 @@ woody_page_click_printable_deals | Impression de Bons plans | ```Identifiants de
 
 event | Nom
 -------------------------- | ---
-woody_page_click_deal_action | Access Config : Application du contrast par défaut
+woody_page_accessconfig_open | Ouverture du module Access Config
+woody_page_accessconfig_default_contrast | Access Config : Application du contrast par défaut
 woody_page_accessconfig_gray_contrast | Access Config : Application du niveau de gris
 woody_page_accessconfig_high_contrast | Access Config : Renforcement des contrastes
 woody_page_accessconfig_inv_contrast | Access Config : Inversion des contrastes
@@ -191,21 +204,35 @@ woody_page_accessconfig_fontsize_125 | Access Config : Agrandissement de la poli
 woody_page_accessconfig_fontsize_150 | Access Config : Agrandissement de la police x1,5
 woody_page_accessconfig_fontsize_200 | Access Config : Agrandissement de la police x2
 
+Ces événements gardent toujours le préfixe `woody_page_`, y compris sur une fiche SIT (jamais `hawwwai_sheet_`). Un choix d'option n'est remonté qu'une fois, quand il change.
 
 #### :speech_balloon: Liste des évenements Hawwwai "Fiche"
 
 event | Nom | Valeur
 -------------------------- | --- | ------
-hawwwai_sheet_website | Clic site internet du prestataire | ```URL du site```
-hawwwai_sheet_booking | Clic bouton "réserver" |
-hawwwai_sheet_buy | Clic bouton "acheter" |
-hawwwai_sheet_download_pdf | Clic téléchargement PDF | ```URL du fichier```
-hawwwai_sheet_download_itinerary | Clic téléchargement GPX/KML | ```URL du fichier```
-hawwwai_sheet_contact_form_opened | Formulaire de contact (ouvert) |
-hawwwai_sheet_contact_form_sent | Formulaire de contact (envoyé) | ```Optin: Prestataire + Newsletter```
-hawwwai_sheet_reveal_phone | Clic numéro de téléphone | ```Numero de téléphone```
-hawwwai_sheet_call_phone | Clic sur le numéro de téléphone une fois affiché (numéros masqués uniquement) | ```Numero de téléphone```
-hawwwai_sheet_social_network | Clic réseaux sociaux | twitter, facebook
+hawwwai_sheet_booking | Clic bouton réserver | ```URL de réservation```
+hawwwai_sheet_website | Clic site internet du prestataire | ```Type de contact + URL du site```
+hawwwai_sheet_reveal_phone | Clic numéro de téléphone (bouton "Afficher le numéro", ou lien direct si les numéros ne sont pas masqués) | ```Type de contact + numéro de téléphone```
+hawwwai_sheet_call_phone | Appel numéro de téléphone (clic sur le numéro une fois affiché, numéros masqués uniquement) | ```Type de contact + numéro de téléphone```
+hawwwai_sheet_contact_form_opened | Formulaire de contact (ouvert) | ```Type de contact + nom```
+hawwwai_sheet_contact_form_sent | Formulaire de contact (envoyé) | ```Type de contact + nom```
+hawwwai_sheet_social_network | Clic réseaux sociaux | Page Facebook, Page X, Page Instagram, Page Pinterest, Page GoogleMyBusiness, Page Linkedin, Page Tiktok, Page Youtube, Page Tripadvisor
+hawwwai_sheet_get_there_links | Clic lien M'y rendre |
+hawwwai_sheet_get_there_service | Clic service M'y rendre | ```Service choisi (Google Maps, Waze…)```
+hawwwai_sheet_get_there_sncf | Clic lien J'y vais en train |
+hawwwai_sheet_download_pdf | Clic téléchargement PDF | ```Nom du fichier```
+hawwwai_sheet_download_trace | Clic téléchargement tracé (GPX/KML) | ```Nom du fichier```
+hawwwai_sheet_show_full_description | Clic bouton Lire la suite |
+hawwwai_sheet_more_pictures_gallery | Clic Plus de photos (galerie) |
+hawwwai_sheet_more_pictures_poster | Clic Plus de photos (poster) |
+hawwwai_sheet_show_all_equipments | Clic bouton Afficher toutes les prestations |
+hawwwai_sheet_show_all_accessibility_services | Clic bouton Afficher toutes les prestations (accessibilité) |
+hawwwai_sheet_fairguest_mark | Clic note FairGuest | ```Note FairGuest```
+hawwwai_sheet_greencast_mark | Clic score Greencast | ```Score Greencast```
+hawwwai_sheet_issue_form_opened | Formulaire de signalement (ouvert) |
+hawwwai_sheet_issue_form_sent | Formulaire de signalement (envoyé) |
+
+Sur une page éditoriale, les blocs qui intègrent une fiche (bloc contact prestataire, résumé de fiche) poussent les mêmes événements avec le préfixe `woody_page_` (ex. `woody_page_reveal_phone`, `woody_page_website`).
 
 #### :speech_balloon: Liste des évenements Hawwwai "Playlist"
 
@@ -215,6 +242,8 @@ hawwwai_playlist_sheet_booking | Clic bouton "réserver" de la fiche | ```Nom de
 hawwwai_playlist_sheet_click | Clic sur la fiche | ```Nom de la fiche + Identifiant de fiche```
 hawwwai_playlist_filter_click | Clic sur un filtre | ```Nom de la facette + Valeur sélectionnée```
 hawwwai_playlist_pagination_click | Clic sur la pagination | ```Numéro de la page```
+
+:warning: `hawwwai_playlist_pagination_click` n'est plus émis depuis le passage aux listings v2 : sa remise en place est prévue.
 
 #### :warning: "Catégorie" n'est plus utilisée sur GA4 mais encore sur Matomo ou GA3
 
